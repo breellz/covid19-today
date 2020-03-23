@@ -1,0 +1,19 @@
+.cases_body{
+    border: solid #c69516;
+    padding: 3rem;
+    background:#222831;
+}
+
+
+.cases_text{
+        font-style: 'Teko','sans-serif';
+        word-break: break-all ;
+        color:#c69516;
+        
+
+}
+@media (min-width: 45rem){
+    .case_body{
+        margin-bottom: 4.8rem;
+    }
+}

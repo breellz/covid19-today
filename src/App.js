@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import './css/base.css';
+import Cases from './components/Cases';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+
+  render(){
+    const title = "COVID-19 TODAY"
+    const subtitle ="Helping data get where it's needed"
+
+    return(
+      <div>
+         <Header  title = {title} subtitle = {subtitle}/>
+         <Cases />
+      </div>
+    )
+  }
 }
 
 export default App;
