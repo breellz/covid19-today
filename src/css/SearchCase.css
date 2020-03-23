@@ -1,0 +1,29 @@
+.search{
+    display: flex;
+    flex-direction: column;
+    width: 95%
+
+}
+.search_input{
+    flex-grow: 1;
+    height: 2.5rem;
+    border-radius: 5px;
+}
+
+@media (min-width : 45rem){
+    .search{
+        flex-direction: row;
+    }
+
+}
+.button{
+    background: rgb(15, 94, 143);
+    border-bottom:.3rem solid darken(lightskyblue, 10%);
+    color:white;
+    padding:1.3rem;
+    font-weight: 500;
+    border-style: solid;
+    border-color: black;
+    border-radius: 1.6rem;
+    
+}
