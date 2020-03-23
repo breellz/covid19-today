@@ -1,17 +1,25 @@
 .cases_body{
-    border: solid #c69516;
+    max-width:60rem;
+    width:auto;
     padding: 3rem;
-    background:#222831;
+    box-shadow: 0 4px 8px 0 #1a1d24;
+    transition: 0.3s;
+    border-radius: 5px;
+    
 }
-
+.cases_body:hover{
+    box-shadow: 0 8px 16px  #1a1d24;
+}
 
 .cases_text{
-        font-style: 'Teko','sans-serif';
-        word-break: break-all ;
-        color:#c69516;
-        
-
+        color: black;
+        font-size: 17px;
+        padding:1.6rem;
 }
+.case_value_text {
+    color: red;
+}
+
 @media (min-width: 45rem){
     .case_body{
         margin-bottom: 4.8rem;

@@ -9,7 +9,7 @@ class Cases extends React.Component{
          }
      }
      componentDidMount(){
-         fetch('https://api.covid19api.com/summary').then(response =>response.json())
+          fetch('https://api.covid19api.com/summary').then(response =>response.json())
          .then(response => this.setState(()=>({
              cases: response.Countries
          })))
@@ -20,8 +20,8 @@ class Cases extends React.Component{
          return(
              <div>
              <ol>
-             {this.state.cases.map((value)=> <p className="cases_body container"><li className="cases_text" key = {value.Country}>
-             Country:   {value.Country}<br /> 
+             {this.state.cases.map((value)=> <p className=" container cases_body "><li className="cases_text" key = {value.Country}>
+             Country:  {value.Country}<br /> 
              New Confirmed :  {value.NewConfirmed}<br />
              New Deaths:   {value.NewDeaths}<br />
              New Recovered:   {value.NewRecovered}<br />

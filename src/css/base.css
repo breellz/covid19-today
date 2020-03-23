@@ -1,7 +1,4 @@
-*{
-    margin:0;
-    padding:0;
-}
+
 html{
     font-size: 62.5%;
 }
@@ -9,7 +6,7 @@ html{
 body {
     font-style: Helvetica, Arial, sans-serif;
     font-size : 1.6rem;
-    background: #222831;
+    background: whitesmoke /**#222831**/;
 }
 button{
     cursor: pointer;
