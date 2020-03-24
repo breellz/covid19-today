@@ -3,14 +3,16 @@ import Header from './components/Header';
 import './css/base.css';
 import './css/cases.css'
 import SearchCase from './components/SearchCase';
+import Country from './components/Country'
 
 class App extends React.Component{
   constructor(props){
     super(props)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
     //state
     this.state ={
-        cases : []
+        cases : [],
+        country : undefined
     }
 }
 handleSubmit(e){
@@ -24,6 +26,13 @@ handleSubmit(e){
   
 }
 componentDidMount(){
+    fetch('https://extreme-ip-lookup.com/json')
+    .then(res => res.json())
+    .then(resp => this.setState(()=>({
+      country: resp.country
+    })))
+    .catch(err => console.log(err))
+
      fetch('https://api.covid19api.com/summary').then(response =>response.json())
     .then(response => this.setState(()=>({
         cases: response.Countries
@@ -38,7 +47,9 @@ render(){
       <div>
       <div>
          <Header  title = {title} subtitle = {subtitle}/>
+         
          <SearchCase handleSubmit ={this.handleSubmit} />
+         <Country country = {this.state.country} cases = {this.state.cases} />
       </div>
         <div>
         <ol>
@@ -60,4 +71,5 @@ render(){
 
 }
 
-export default App;
+
+export default App
