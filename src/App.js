@@ -3,7 +3,8 @@ import Header from './components/Header';
 import './css/base.css';
 import './css/cases.css'
 import SearchCase from './components/SearchCase';
-import Country from './components/Country'
+import Country from './components/Country';
+import './css/loader.css';
 
 class App extends React.Component{
   constructor(props){
@@ -12,7 +13,8 @@ class App extends React.Component{
     //state
     this.state ={
         cases : [],
-        country : undefined
+        country : undefined,
+        loading: false
     }
 }
 handleSubmit(e){
@@ -33,9 +35,12 @@ componentDidMount(){
     })))
     .catch(err => console.log(err))
 
+    this.setState(()=>({loading: true}))
+
      fetch('https://api.covid19api.com/summary').then(response =>response.json())
     .then(response => this.setState(()=>({
-        cases: response.Countries
+        cases: response.Countries,
+        loading: false
     })))
 }
 
@@ -51,9 +56,10 @@ render(){
          <SearchCase handleSubmit ={this.handleSubmit} />
          <Country country = {this.state.country} cases = {this.state.cases} />
       </div>
+
         <div>
         <ol>
-        {this.state.cases.map((value)=> <p className=" container cases_body ">
+        {!this.state.loading ? this.state.cases.map((value)=> <p className=" container cases_body ">
         <li className="cases_text" key = {value.Country}>
         Country:  {value.Country}<br /> 
         New Confirmed :  {value.NewConfirmed}<br />
@@ -62,7 +68,7 @@ render(){
         Total Confirmed:  {value.TotalConfirmed}<br />
         Total Deaths:  {value.TotalDeaths}<br />
         Total Recovered:  {value.TotalRecovered}
-        </li></p>)}
+        </li></p>): <div className=" container loader"></div>}
         </ol>
         </div>
         </div>
