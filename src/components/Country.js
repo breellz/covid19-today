@@ -1,10 +1,6 @@
 import React from 'react';
 
 class Country extends React.Component{
-    constructor(props){
-        super(props);
-       // this.handleDisplay = this.handleDisplay.bind(this)
-    }
  handleDisplay(){
     for(let i =0; i < this.props.cases.length; i++){
         if(this.props.cases[i].Country === this.props.country){
