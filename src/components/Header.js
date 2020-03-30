@@ -10,7 +10,6 @@ const Header =(props)=>{
              <p>API provided by <a href="https://twitter.com/ksredelinghuys">Kyle Rdelinghuys</a></p>
              <p>Data from <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE</a></p>
              <p>Built by <a href="https://twitter.com/breellz">Bassit Owolabi</a></p>
-             <p>Please Search by country and with the first letter capitalized</p>
             </div>
         )
 }

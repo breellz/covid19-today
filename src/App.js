@@ -21,7 +21,7 @@ handleSubmit(e){
   e.preventDefault();
   const NewCountry = e.target.elements.option.value;
   this.setState((prevState)=>({cases: prevState.cases.filter((searched)=>{
-    return NewCountry === searched.Country
+    return searched.Country.toLowerCase().includes(NewCountry.toLowerCase())
   })}))
   
 
