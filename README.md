@@ -1,9 +1,8 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
+[![Forks][forks-shield]][https://github.com/breellz/covid19-today/network/members]
+[![Stargazers][stars-shield]][https://github.com/breellz/covid19-today/stargazers]
+[![Issues][issues-shield]][https://github.com/breellz/covid19-today/issues]
+
 
 
 <h3 align="center">Covid19-Today</h3>
