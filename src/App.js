@@ -17,6 +17,9 @@ class App extends React.Component{
         loading: false
     }
 }
+
+
+  
 handleSubmit(e){
   e.preventDefault();
   const NewCountry = e.target.elements.option.value;
@@ -24,9 +27,9 @@ handleSubmit(e){
     return searched.Country.toLowerCase().includes(NewCountry.toLowerCase())
   })}))
   
-
-  
 }
+
+
 componentDidMount(){
     fetch('https://extreme-ip-lookup.com/json')
     .then(res => res.json())
@@ -53,7 +56,7 @@ render(){
       <div>
          <Header  title = {title} subtitle = {subtitle}/>
          
-         <SearchCase handleSubmit ={this.handleSubmit} />
+         <SearchCase handleSubmit ={this.handleSubmit} cases = {this.state.cases} />
          <Country country = {this.state.country} cases = {this.state.cases} />
       </div>
 
