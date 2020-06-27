@@ -1,10 +1,4 @@
 
-[![Forks][forks-shield]][https://github.com/breellz/covid19-today/network/members]
-[![Stargazers][stars-shield]][https://github.com/breellz/covid19-today/stargazers]
-[![Issues][issues-shield]][https://github.com/breellz/covid19-today/issues]
-
-
-
 <h3 align="center">Covid19-Today</h3>
 <p align="center">
     Covid 19 data in real time
